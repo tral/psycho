@@ -23,6 +23,8 @@ type
     timer5sec: TTimer;
     Label10: TLabel;
     Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
     procedure NextStep();
     procedure HideAll();
     procedure FormCreate(Sender: TObject);
@@ -133,8 +135,6 @@ begin
   begin
     CurrStep := 'next_test_info';
     HideAll();
-
-
     Form2.Close;
     Form1.StartTestTask();
     Exit;
@@ -144,7 +144,7 @@ begin
   begin
     CurrStep := 'next_test';
     HideAll();
-    Label11.Left:=Label11.Left+75;
+    //Label11.Left:=Label11.Left+75;
 
     inc(CurrTaskNumber);
 
@@ -177,10 +177,38 @@ begin
 
   if (CurrStep = 'next_test') then
   begin
-    CurrStep := 'next_test_info';
+    CurrStep := 'next_test_success';
     HideAll();
     Form2.Close;
     Form1.StartTask();
+    Exit;
+  end;
+
+  if (CurrStep = 'next_test_success') then
+  begin
+    HideAll();
+
+    if CurrTaskNumber = 8 then
+    begin
+      Label12.Caption := 'Вы успешно справились со всеми заданиями.';
+      Label3.Caption := 'Для выхода из программы нажмите Enter';
+      CurrStep := 'exit_to_windows';
+    end
+    else
+    begin
+      Label12.Caption := 'Вы успешно завершили задание '+inttostr(CurrTaskNumber)+'.';
+      CurrStep := 'next_test_info';
+    end;
+
+    Label12.Show;
+    Label13.Show;
+    Label3.Show;
+    Exit;
+  end;
+
+  if (CurrStep = 'exit_to_windows') then
+  begin
+    Application.Terminate;
     Exit;
   end;
 
@@ -249,6 +277,10 @@ begin
   Label7.Visible := false;
   Label8.Visible := false;
   Label9.Visible := false;
+  Label10.Visible := false;
+  Label11.Visible := false;
+  Label12.Visible := false;
+  Label13.Visible := false;
   ComboBox1.Hide;
   ComboBox2.Hide;
   Edit1.Hide;

@@ -4,7 +4,7 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Form1'
-  ClientHeight = 246
+  ClientHeight = 620
   ClientWidth = 1081
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,7 +14,6 @@ object Form1: TForm1
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
-  WindowState = wsMaximized
   OnCreate = FormCreate
   OnMouseMove = FormMouseMove
   PixelsPerInch = 96
@@ -52,8 +51,8 @@ object Form1: TForm1
     Visible = False
   end
   object l1: TLabel
-    Left = 28
-    Top = 46
+    Left = 56
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -72,8 +71,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l2: TLabel
-    Left = 52
-    Top = 46
+    Left = 80
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -92,8 +91,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l3: TLabel
-    Left = 76
-    Top = 46
+    Left = 104
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -112,8 +111,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l4: TLabel
-    Left = 100
-    Top = 46
+    Left = 128
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -132,8 +131,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l5: TLabel
-    Left = 124
-    Top = 46
+    Left = 152
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -152,8 +151,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l6: TLabel
-    Left = 148
-    Top = 46
+    Left = 176
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -172,8 +171,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l7: TLabel
-    Left = 172
-    Top = 46
+    Left = 200
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -192,8 +191,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l8: TLabel
-    Left = 196
-    Top = 46
+    Left = 224
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -212,8 +211,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l9: TLabel
-    Left = 220
-    Top = 46
+    Left = 248
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -232,8 +231,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l10: TLabel
-    Left = 244
-    Top = 46
+    Left = 272
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -252,8 +251,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l11: TLabel
-    Left = 268
-    Top = 46
+    Left = 296
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -272,8 +271,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l12: TLabel
-    Left = 292
-    Top = 46
+    Left = 320
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -292,8 +291,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l13: TLabel
-    Left = 316
-    Top = 46
+    Left = 344
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -312,8 +311,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l14: TLabel
-    Left = 340
-    Top = 46
+    Left = 368
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -332,8 +331,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l15: TLabel
-    Left = 364
-    Top = 46
+    Left = 392
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -352,8 +351,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l16: TLabel
-    Left = 388
-    Top = 46
+    Left = 416
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -372,8 +371,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l17: TLabel
-    Left = 412
-    Top = 46
+    Left = 440
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -392,8 +391,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l18: TLabel
-    Left = 436
-    Top = 46
+    Left = 464
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -412,8 +411,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l19: TLabel
-    Left = 460
-    Top = 46
+    Left = 488
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -432,8 +431,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l20: TLabel
-    Left = 484
-    Top = 46
+    Left = 512
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -452,8 +451,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l21: TLabel
-    Left = 508
-    Top = 46
+    Left = 536
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -472,8 +471,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l22: TLabel
-    Left = 532
-    Top = 46
+    Left = 560
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -492,8 +491,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l23: TLabel
-    Left = 556
-    Top = 46
+    Left = 584
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -512,8 +511,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l24: TLabel
-    Left = 580
-    Top = 46
+    Left = 608
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -532,8 +531,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l25: TLabel
-    Left = 604
-    Top = 46
+    Left = 632
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -552,8 +551,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l26: TLabel
-    Left = 628
-    Top = 46
+    Left = 656
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -572,8 +571,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l27: TLabel
-    Left = 652
-    Top = 46
+    Left = 680
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -592,8 +591,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l28: TLabel
-    Left = 676
-    Top = 46
+    Left = 704
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -612,8 +611,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l29: TLabel
-    Left = 700
-    Top = 46
+    Left = 728
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -632,8 +631,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l30: TLabel
-    Left = 724
-    Top = 46
+    Left = 752
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -652,8 +651,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l31: TLabel
-    Left = 748
-    Top = 46
+    Left = 776
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -672,8 +671,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l32: TLabel
-    Left = 772
-    Top = 46
+    Left = 800
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -692,8 +691,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l33: TLabel
-    Left = 796
-    Top = 46
+    Left = 824
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -712,8 +711,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l34: TLabel
-    Left = 820
-    Top = 46
+    Left = 848
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -732,8 +731,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l35: TLabel
-    Left = 844
-    Top = 46
+    Left = 872
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -752,8 +751,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l36: TLabel
-    Left = 868
-    Top = 46
+    Left = 896
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -772,8 +771,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l37: TLabel
-    Left = 892
-    Top = 46
+    Left = 920
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -792,8 +791,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l38: TLabel
-    Left = 916
-    Top = 46
+    Left = 944
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -812,8 +811,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l39: TLabel
-    Left = 940
-    Top = 46
+    Left = 968
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -832,8 +831,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object l40: TLabel
-    Left = 964
-    Top = 46
+    Left = 992
+    Top = 246
     Width = 24
     Height = 34
     Alignment = taCenter
@@ -852,8 +851,8 @@ object Form1: TForm1
     OnMouseMove = Label6MouseMove
   end
   object Label1: TLabel
-    Left = 988
-    Top = 46
+    Left = 916
+    Top = 131
     Width = 93
     Height = 34
     Alignment = taCenter
@@ -922,6 +921,15 @@ object Form1: TForm1
     TabOrder = 2
     Visible = False
     OnClick = Button4Click
+  end
+  object btn1: TButton
+    Left = 432
+    Top = 193
+    Width = 215
+    Height = 37
+    Caption = #1053#1072#1095#1072#1090#1100
+    TabOrder = 3
+    OnClick = btn1Click
   end
   object Timer1: TTimer
     Enabled = False

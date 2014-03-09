@@ -15,6 +15,6 @@ begin
   Application.Title := 'йоб';
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm2, Form2);
-  Form2.ShowModal;
   Application.Run;
+
 end.

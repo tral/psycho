@@ -19,10 +19,12 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object Label11: TLabel
-    Left = 328
+    Left = 124
     Top = 48
-    Width = 276
+    Width = 741
     Height = 35
+    Alignment = taCenter
+    AutoSize = False
     Caption = #1058#1088#1077#1085#1080#1088#1086#1074#1086#1095#1085#1099#1081' '#1090#1077#1089#1090
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -79,11 +81,19 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 377
-    Top = 480
-    Width = 227
-    Height = 13
+    Left = 124
+    Top = 472
+    Width = 741
+    Height = 27
+    Alignment = taCenter
+    AutoSize = False
     Caption = #1044#1083#1103' '#1087#1088#1086#1076#1086#1083#1078#1077#1085#1080#1103' '#1085#1072#1078#1084#1080#1090#1077' '#1082#1083#1072#1074#1080#1096#1091' '#171'Enter'#187
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label4: TLabel
     Left = 368
@@ -143,6 +153,39 @@ object Form2: TForm2
     Width = 276
     Height = 35
     Caption = #1058#1088#1077#1085#1080#1088#1086#1074#1086#1095#1085#1099#1081' '#1090#1077#1089#1090
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object Label12: TLabel
+    Left = 124
+    Top = 48
+    Width = 741
+    Height = 35
+    Alignment = taCenter
+    AutoSize = False
+    Caption = #1042#1099' '#1091#1089#1087#1077#1096#1085#1086' '#1079#1072#1074#1077#1088#1096#1080#1083#1080' '#1079#1072#1076#1072#1085#1080#1077' 1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+    WordWrap = True
+  end
+  object Label13: TLabel
+    Left = 124
+    Top = 117
+    Width = 741
+    Height = 35
+    Alignment = taCenter
+    AutoSize = False
+    Caption = #1055#1086#1079#1076#1088#1072#1074#1083#1103#1077#1084'!'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -29
@@ -236,7 +279,7 @@ object Form2: TForm2
     Enabled = False
     Interval = 5000
     OnTimer = timer5secTimer
-    Left = 384
-    Top = 344
+    Left = 12
+    Top = 8
   end
 end

@@ -1820,9 +1820,9 @@ begin
     end;
     writeln(f, '');
 
-    ShowMessage('см файлы results.csv и last_log.txt в директории программы!');
-    Application.Terminate;
-    Exit;
+//    ShowMessage('см файлы results.csv и last_log.txt в директории программы!');
+//    Application.Terminate;
+//    Exit;
 
   finally
     closeFile(f);

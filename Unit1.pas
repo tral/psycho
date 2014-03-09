@@ -64,6 +64,7 @@ type
     Timer1: TTimer;
     Label7: TLabel;
     Label8: TLabel;
+    btn1: TButton;
     procedure PrepareToStartTask();
     procedure StartTask();
     procedure StartTestTask();
@@ -85,6 +86,7 @@ type
     procedure Button4Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure l1Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
 
 
 
@@ -206,20 +208,18 @@ begin
 
     if CurrTaskNumber=8 then
       Analytics.ToCSV() //!!! усреднение
-    else
-      begin
-       Form2.NextStep();
-       Form2.ShowModal();
-      end;
 
-  end
-  else
-  begin
-    Form2.NextStep();
-    Form2.ShowModal();
   end;
 
+    Form2.NextStep();
+    Form2.ShowModal();
 
+end;
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+  btn1.Hide;
+  Form2.ShowModal;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -237,22 +237,17 @@ begin
    begin
      FinishTask();
      Exit;
-   end;
-
-   if (CurrRowNumber <2) then Form1.RowGenerator(CurrSignalLetter, CurrPrefix, CurrRowNumber+2);
+   end
+   else Form1.RowGenerator(CurrSignalLetter, CurrPrefix, CurrRowNumber+2);
 
   end
-  else
-  begin
-    Form1.RowGenerator(CurrSignalLetter, CurrPrefix, -1);
-  end;
-
+  else Form1.RowGenerator(CurrSignalLetter, CurrPrefix, -1);
 
   point.X := 0;
   point.y := 0;
   point:= l1.ClientToScreen(point);
   AllowMoveHandle := false; // чтобы не учитывать последующее перемещение курсора
-  SetCursorPos (point.x,  point.y);
+  SetCursorPos (point.x,  point.y+12); // поставим на середину буквы по вертикали
   point:= Form1.ScreenToClient(point);
   oldX := point.x; // относительно формы
   oldY := point.y;
@@ -261,7 +256,7 @@ begin
 
   minY := point.y;
   maxY := point.y + l1.Height -1;
-  maxX := point.x + 24*40 - 1; // Ёта координата нужна дл€ контрол€ ситуации, когда зажали кнопку мыши и ломимс€ вправо
+  maxX := point.x + 24*40; // Ёта координата нужна дл€ контрол€ ситуации, когда зажали кнопку мыши и ломимс€ вправо
 //  label2.caption := 'minY: ' + inttostr(minY) + ', maxY: ' + inttostr(maxY);
 
 
@@ -289,7 +284,7 @@ begin
   // в 1-й строке должна быть хот€ бы одна сигнальна€ буква
   repeat
 
-    if sgnCnt < 0 then sgnCnt:= Random(6); // от 0 до 5
+    if sgnCnt <= 0 then sgnCnt:= Random(6); // от 0 до 5
 
     if TestType = 1 then
       ToolUnit.GenerateStringForTest1(signalLetter, sgnCnt)
@@ -392,25 +387,53 @@ begin
   LettersVisibility (false);
   TestInProgress := false;
   CurrTaskNumber := 0;
-  TestType := 1;
+  TestType := 2;
   multiplier := Round(Form1.Timer1.Interval/5); // отрезок времени в миллисекундах, которых 5, в сумме равны длине одного задани€ (по “« 60000)
 
   Form1.Caption := Title + ' v.' + Version;
+
 
 end;
 
 procedure TForm1.FormMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
-  var pointSet: TPoint;
+  var point, pointSet: TPoint;
 begin
  if TestInProgress then
  begin
-   AllowMoveHandle := false; // „тобы SetCursorPos не вызывал обработчик MouseMove
-   pointSet.X := oldX;
-   pointSet.Y := oldY;
-   pointSet:= Form1.ClientToScreen(pointSet);
+   point := Form1.ScreenToClient(MyMouse.CursorPos);
 
-   SetCursorPos (pointSet.x, pointSet.y);
+   if  point.X > maxX then
+   begin
+     // ≈сли крива€ пуста€ строка была прошла€ - просто выкидываем ее из рассмотрени€
+     if Length(aX[High(aX)]) = 0 then
+     begin
+      //ShowMessage('haha! 0!');
+      //
+      SetLength(aLetters, Length(aLetters)-1);
+      SetLength(aSignal, Length(aSignal)-1);
+      SetLength(aClicks, Length(aClicks)-1);
+      SetLength(aTime, Length(aTime)-1);
+      SetLength(aX, Length(aX)-1);
+      SetLength(aY, Length(aY)-1);
+
+      dec(CurrRowNumber);
+     end;
+     TestInProgress := false;
+     RenderNextRow();
+     TestInProgress := true;
+   end
+   else
+   begin
+     AllowMoveHandle := false; // „тобы SetCursorPos не вызывал обработчик MouseMove
+     pointSet.X := oldX;
+     pointSet.Y := oldY;
+     pointSet:= Form1.ClientToScreen(pointSet);
+
+     SetCursorPos (pointSet.x, pointSet.y);
+   end;
+
+
  end;
 
 end;
@@ -421,6 +444,8 @@ begin
  // финиш прохода по строке
  if (TestInProgress) then
  begin
+ if Length(aX[High(aX)]) = 0 then
+   ShowMessage('haha! 0!');
    TestInProgress := false;
    RenderNextRow();
    TestInProgress := true;
@@ -462,7 +487,7 @@ begin
 
     point := Form1.ScreenToClient(MyMouse.CursorPos);
 
-    if ((point.x>=oldX) and (point.y>=minY) and (point.y<=maxY) and (point.X<=maxX)) then
+    if ((point.x>=oldX) and (point.y>=minY) and (point.y<=maxY)) then //and (point.X<=maxX)) then
     begin
       oldX := point.x;
       oldY := point.y;

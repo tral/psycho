@@ -78,7 +78,7 @@ object Form1: TForm1
     Alignment = taCenter
     AutoSize = False
     Caption = #1042
-    Color = clSkyBlue
+    Color = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
@@ -118,7 +118,7 @@ object Form1: TForm1
     Alignment = taCenter
     AutoSize = False
     Caption = #1044
-    Color = clMedGray
+    Color = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32

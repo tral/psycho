@@ -333,8 +333,8 @@ begin
       if c <> nil then
         begin
           (c as TLabel).Caption := currLetters[i];
-          if aSignal[High(aSignal)][i] then (c as TLabel).Color := clGreen
-                                       else (c as TLabel).Color := clWhite;
+        //  if aSignal[High(aSignal)][i] then (c as TLabel).Color := clGreen
+          //                             else (c as TLabel).Color := clWhite;
         end;
   end;
 
@@ -387,7 +387,7 @@ begin
   LettersVisibility (false);
   TestInProgress := false;
   CurrTaskNumber := 0;
-  TestType := 2;
+  TestType := 1;
   multiplier := Round(Form1.Timer1.Interval/5); // отрезок времени в миллисекундах, которых 5, в сумме равны длине одного задания (по ТЗ 60000)
 
   Form1.Caption := Title + ' v.' + Version;
